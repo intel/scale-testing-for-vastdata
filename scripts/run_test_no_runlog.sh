@@ -1088,8 +1088,8 @@ run_test_elbencho_file() {
               
     echo -e "\nBegin #$wl_num workload: $wl_name" 
     mkdir -p "$run_dir/$ELBENCHO_FILE_RESULT_SUBDIR_ON_HOST" 
-    docker container kill elbencho-server > /dev/null 2>/dev/null;
-    docker container rm elbencho-server > /dev/null 2>/dev/null; 
+    docker container kill elbencho-client > /dev/null 2>/dev/null;
+    docker container rm elbencho-client > /dev/null 2>/dev/null; 
     
     local data_directory=()
     if [ "$MULTIPATH_ENABLE" == "1" ]; then
@@ -1196,8 +1196,8 @@ run_test_elbencho_s3() {
     fi          
     echo -e "\nBegin #$wl_num workload: $wl_name"
     mkdir -p "$run_dir/$ELBENCHO_S3_RESULT_SUBDIR_ON_HOST"
-    docker container kill elbencho-server > /dev/null 2>/dev/null;
-    docker container rm elbencho-server > /dev/null 2>/dev/null;
+    docker container kill elbencho-client > /dev/null 2>/dev/null;
+    docker container rm elbencho-client > /dev/null 2>/dev/null;
     
     if [ "$dry_run" == "0" ]; then
         docker run --rm --name elbencho-client --net=host -v "$run_dir/$ELBENCHO_S3_RESULT_SUBDIR_ON_HOST:$ELBENCHO_S3_RESULT_DIR_ON_CONTAINER" "breuner/elbencho:$ELBENCHO_TAG" "${elbencho_args_array[@]}" --s3endpoints "$endpoints" --s3key "$ELBENCHO_S3KEY" --s3secret "$ELBENCHO_S3SECRET" --hosts "$client_nodes" --csvfile "$ELBENCHO_S3_RESULT_DIR_ON_CONTAINER/${result_filename}.csv"
