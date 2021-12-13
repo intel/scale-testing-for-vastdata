@@ -21,7 +21,7 @@
 #                 --write --blockvarpct=100 --iodepth=8 --threads=8  --block=1024k --direct --size=1g --nosvcshare --dirs=1 --files=1 --mkdirs --name=bw-test-100g-job2
 #     --tag: set the flag to 1 to append workload number to the generated .csv filename, 
 #             
-#            This can be used for workloads that can not be differentiated by the mandatory options,
+#            This can be used for workloads that cannot be differentiated by the mandatory options,
 #            to generate a unique summary .csv filename. 
 #             
 #            Note that:

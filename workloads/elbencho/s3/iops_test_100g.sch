@@ -7,7 +7,7 @@
 #
 # s3 protocol defines that:
 #    (1) an upload object cannot consist of more than 10000 parts
-#    (2) an upload object can not be less than 5MiB
+#    (2) an upload object cannot be less than 5MiB
 # VAST doesn't have limitation of (2), but does also have (1).
 # Workaround: use 5MiB for write, but read with 4KiB.
 --write --blockvarpct=100 --threads=4 --block=5m --size=1280m --dirs=1 --files=5 --mkdirs elbencho-s3-bucket1-100g

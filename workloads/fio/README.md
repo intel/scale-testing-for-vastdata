@@ -2,18 +2,18 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 #========================================================================================================
-# FIO options (refer to FIO manpage for their definitions) supported by the fio schedule file:
+# FIO options (refer to FIO man page for their definitions) supported by the fio schedule file:
 # 
 #     Mandatory: rw/numjobs/iodepth/bs
 #                They will be used to generate the fio summary log filename, and jobname when --name is not specified.
 #     Optional:  size/runtime/ramp_time/name/fallocate/create_on_open/fill_device/create_serialize
-#                Default values of these are as specified in fio_template.ini, or disalbed if commented out in fio_template.ini.
+#                Default values of these are as specified in fio_template.ini, or disabled if commented out in fio_template.ini.
 # 
 # Non-FIO options supported by the schedule file: 
 #     --tag: set the flag to 1 to append workload number to the generated summary log filename, 
 #            and jobname but only when --name is not specified.
 #             
-#            This can be used for workloads that can not be differentiated by the mandatory options,
+#            This can be used for workloads that cannot be differentiated by the mandatory options,
 #            to generate unique summary log filename. 
 #             
 #            Note that this doesn't affect the jobname if --name is specified.

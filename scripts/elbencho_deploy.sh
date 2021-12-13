@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 # Anonymous and authenticated docker users may run into docker pull limit quickly.
-# This script provide a workaround to manually pull once and deploy the elbencho
+# This script provides a workaround to manually pull once and deploy the elbencho
 # docker image to all systems.
 
 # How to use it:
@@ -15,7 +15,7 @@
 #     docker image ls
 # Example response:
 #     REPOSITORY                  TAG          IMAGE ID      CREATED      SIZE
-#     docker.io/breuner/elbencho  latest       d379a16a2453  4 days ago   136 MB
+#     docker.io/breuner/elbencho  latest       6ac5b651eaa9  4 days ago   136 MB
 # Step 3: update ELBENCHO_ID and ELBENCHO_TAG accordingly in env.conf.
 #         Tag is user defined string to help identify the version in a more convenient way.
 # Step 4: run this script to deploy accordingly

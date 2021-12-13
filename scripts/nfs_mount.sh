@@ -32,7 +32,7 @@ elif [ "$NCONNECT_NUM" -lt $NCONNECT_NUM_MIN ] || [ "$NCONNECT_NUM" -gt $NCONNEC
     echo "NFS mount failure, invalid nconnect number, must be in range [$NCONNECT_NUM_MIN, $NCONNECT_NUM_MAX], exiting..."
     return_code=$ERROR_CODE_NO_MULTIPATH_MOUNT_INVALID_NCONNECT_NUM
 elif [ "$randomnize" != "yes" ] && [ "$randomnize" != "no" ]; then
-    echo "NFS mount failure, invalid randomnization, must be in [yes, no], exiting..."
+    echo "NFS mount failure, invalid randomization, must be in [yes, no], exiting..."
     return_code=$ERROR_CODE_NO_MULTIPATH_MOUNT_INVALID_RANDOMNIZE
 fi
 

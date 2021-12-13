@@ -9,8 +9,8 @@ script_dir=${validation_dir/%\/validation/}
 source "$script_dir/error_code.conf"
 
 # Todo: not all error codes are tested, as some require more work, 
-#       i.e to change the configuration with custom env.conf.override.
-#       However, the framework is surficient to test all.
+#       i.e. to change the configuration with custom env.conf.override.
+#       However, the framework is sufficient to test all.
 
 # Use a normal command line for this, but do not provide valid client names in env.conf.override for force the error
 test_cmd_index_for_ERROR_CODE_CLIENT_NOT_REACHABLE=4  

@@ -400,7 +400,7 @@ mount_nfs_no_multipath () {
                 
         # Mount may fail, but clush return code is 0. So capture the stderr result to know the actual error instead.
         clush -w "$clients" -f "$CLUSH_MAX_FAN_OUT" "cd $VAST_SCALE_TESTING_PATH; ./nfs_mount.sh $MOUNT $REMOTE_PATH $HOST_SUBNET $nconnect_num $randomnize $NFS_MOUNT_LOG_FILE ${vips_to_mount[*]} &" &
-        # No wait to complete here for better performance, as check of error condition is also defterred
+        # No wait to complete here for better performance, as check of error condition is also deferred
     fi
 }
 
@@ -434,7 +434,7 @@ mount_nfs_multipath () {
   
     # Now mount it.
     # localports need to match the HOST_SUBNET
-    # chown is necessary otherwise FIO can not write to the folder.
+    # chown is necessary otherwise FIO cannot write to the folder.
    
     if [ "$inject_error_num" == "$ERROR_CODE_MULTIPATH_MOUNT_FAILURE" ]; then
         # Mess up HOST_SUBNET to force the error
@@ -589,8 +589,8 @@ before_test () {
 }
 
 #=================================================================
-# Automatically upload the results to CIFS share after the test
-# This can be enabled/disabled by RESULTS_CIFS_UPLOAD_ENABLE in env.conf
+# Automatically upload the results to NFS share after the test
+# This can be enabled/disabled by RESULTS_UPLOAD_ENABLE.
 #=================================================================
 upload_results () {
 
@@ -987,7 +987,7 @@ run_test_fio() {
         wl_name="${op}_qd_${qd}_${bs}_${numjobs}w"
     fi
     
-    # For workloads that can not be differentiated by the mandatory options,
+    # For workloads that cannot be differentiated by the mandatory options,
     # append workload number as the unique identifier for the log filename
     if [ "$tag" == "1" ]; then
         if [ "$jobname" == "invalid" ]; then
@@ -1074,7 +1074,7 @@ run_test_elbencho_file() {
         result_filename+="_rnd"
     fi    
  
-    # For workloads that can not be differentiated by the mandatory options,
+    # For workloads that cannot be differentiated by the mandatory options,
     # append workload number as the unique identifier for the log filename
     if [ "$tag" == "1" ]; then
         result_filename+="_${wl_num}tag"

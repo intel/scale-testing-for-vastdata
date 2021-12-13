@@ -4,7 +4,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 # Ensure the cluster is 99% free and Auxiliary is o or close to 0 before start ( < 4T perferred)
-# The test will write ~35TB of data, and it takes 10~15 minutes to be truely purged
+# The test will write ~35TB of data, and it takes 10~15 minutes to be truly purged
 # Sleep after the purge to ensure all tests start with the same condition
 
 script_dir="$(cd "$(dirname "$0")" || exit; pwd)"
