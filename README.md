@@ -6,4 +6,6 @@
 #    2. consistently
 #    3. easy to customize
 #
-# For how to use the harness, please refer to "Test Preparations" of: [link to be updated]
+# For how to use the harness, please refer to Intel_VAST-Data_Benchmarking_Guide-Short.pdf.
+# 
+# Full version of Guide with source code can also be found at https://vastdata.com/resources/solution-briefs/intel-vast-benchmarking-guide/.
